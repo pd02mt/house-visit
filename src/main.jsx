@@ -44,7 +44,7 @@ function App(){
     {/* סרגל עליון (Topbar) */}
     <header className="topbar">
       <div className="logo-container">
-        <img className="topbar-logo" src={logoImg} width="65px" height="65px" alt="" />
+        <img className="topbar-logo" src={logoImg} width="65px" height="69px" alt="" />
       </div>
       <div>
         <div className="h1-container" onClick={openAbout}>
