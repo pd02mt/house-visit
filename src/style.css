@@ -1,8 +1,6 @@
-@import url('');
-
 @font-face {
   font-family: "Ploni";
-  src: url("./fonts/PloniRegular.otf") ;
+  src: url("./fonts/PloniRegular.otf");
   font-weight: 400;
 }
 
@@ -19,21 +17,20 @@
 
 * {
     box-sizing: border-box;
-  font-family: "Ploni";
+    font-family: "Ploni";
 }
-img{
-    user-select: none;
-      user-select: none;
 
-  -webkit-user-drag: none;
+img {
+    user-select: none;
+    -webkit-user-drag: none;
 }
 
 body {
     margin: 0;
     min-width: 320px;
     min-height: 100vh;
+    min-height: 100dvh;
     background: radial-gradient(circle at 15% 12%, #fff8f0 0, transparent 28%), #f5e9df;
-    overflow-y : hidden;
 }
 
 .app-shell {
@@ -41,6 +38,7 @@ body {
     margin: 0 auto;
     padding: 24px 34px 18px;
     min-height: 100vh;
+    min-height: 100dvh;
     display: flex;
     flex-direction: column
 }
@@ -87,18 +85,21 @@ body {
 }
 
 .topbar h1 {
-    margin-right: 15px;
+    margin-left: 5px;
     padding-right: 8px;
     margin-top: 8px;
     font-size: 20px;
-    color: #8b7e91;
+    color: #6f6184;
 }
 
-.h1-container{
-    width: 10vw;
-    height: 5vh;
+.h1-container {
+    width: auto;
+    min-width: 100px;
+    height: 90%;
+    padding: 6px 16px;
+    margin-bottom: 10px;
     background-color: #CFC5DD;
-    border-radius: 25px;
+    border-radius: 50px;
     border: 2px solid #CFC5DD;
 }
 
@@ -125,7 +126,7 @@ body {
 }
 
 .welcome-copy {
-    padding: 46px 48px
+    padding: clamp(24px, 4vw, 48px);
 }
 
 .pill,
@@ -140,40 +141,34 @@ body {
 }
 
 .welcome h2 {
-  font-family: "Ploni";
-
-  font-weight: normal; 
-  font-weight: 600; /* <-- הוסיפי את השורה הזו */
-  font-size: clamp(28px, 3vw, 52px);
-  line-height: 1.2;
-  margin: 22px 0 16px;
-  max-width: 700px;
-  text-decoration: underline #CFC5DD;
-  text-underline-offset: 12px;
+    font-weight: 600;
+    font-size: clamp(28px, 3vw, 52px);
+    line-height: 1.2;
+    margin: 22px 0 16px;
+    max-width: 700px;
+    text-decoration: underline #CFC5DD;
+    text-underline-offset: 12px;
 }
 
-
-
 .welcome p {
-    margin-top: 10vh;
-    max-width: 45vw;
+    margin-top: clamp(20px, 6vh, 80px);
+    max-width: 100%;
     white-space: normal;
-    font-size: 30px;
-    line-height: 2;
+    font-size: clamp(18px, 2vw, 30px);
+    line-height: 1.8;
     color: #423b37;
 }
 
 .welcome ul {
     padding-right: 20px;
-    font-size: 25px;
+    font-size: clamp(17px, 1.7vw, 25px);
     line-height: 2.1;
     color: #62564f;
     margin: 20px 0 28px
 }
 
-
 .welcome-art {
-    width: 115%;
+    width: 100%;
     height: 100%;
     min-height: 460px;
     object-fit: cover;
@@ -191,8 +186,8 @@ body {
     font-weight: 700;
     cursor: pointer;
     transition: transform .25s, background .15s;
-    margin-top: 150px;
-    margin-right: 80vh;
+    margin-top: clamp(24px, 8vh, 100px);
+    margin-right: 0;
     display: inline-flex;
     gap: 15px;
     align-items: center;
@@ -220,7 +215,6 @@ body {
     color: #7b6e67;
     font-size: 18px;
     font-weight: 700;
-
 }
 
 .progress-track,
@@ -252,15 +246,15 @@ body {
     position: relative;
     border-radius: 20px;
     overflow: hidden;
-    min-height: 480px;
+    min-height: clamp(240px, 40vh, 480px);
     background: #e6d2c2;
     border: 1px solid #ddc9ba
 }
 
 .scene-panel img {
-    width: 110%;
+    width: 100%;
     height: 100%;
-    min-height: 480px;
+    min-height: 0;
     position: absolute;
     inset: 0;
     object-fit: cover
@@ -301,7 +295,7 @@ body {
 }
 
 .question-panel h2 {
-    font-size: 23px;
+    font-size: clamp(19px, 1.6vw, 23px);
     line-height: 1.55;
     margin: 16px 0 12px
 }
@@ -385,13 +379,13 @@ body {
     padding: 13px 16px;
     border-radius: 12px;
     line-height: 1.6;
-    font-size: 20px
+    font-size: clamp(16px, 1.4vw, 20px)
 }
 
 .feedback p {
     margin: 5px 0 0;
-    font-size: 20px;
-    white-space: nowrap;
+    font-size: clamp(16px, 1.4vw, 20px);
+    white-space: normal;
 }
 
 .feedback.positive {
@@ -485,8 +479,8 @@ footer {
     }
 
     .welcome-art {
-        min-height: 230px;
-        max-height: 270px;
+        min-height: 200px;
+        max-height: 260px;
         grid-row: 1
     }
 
@@ -495,12 +489,12 @@ footer {
     }
 
     .scene-panel {
-        min-height: 240px;
+        min-height: 220px;
         max-height: 260px
     }
 
     .scene-panel img {
-        min-height: 240px
+        min-height: 0
     }
 
     .question-panel {
