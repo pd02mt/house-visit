@@ -92,9 +92,7 @@ function App(){
         <button className="primary" onClick={restart}>
           להתחיל מחדש ↻
         </button>
-        {/* <div className="retry-img"> */}
         <img className="retry-img" src="src\assets\retry.png" alt="" />
-        {/* </div> */}
       </section>
     ) : 
     
