@@ -1,13 +1,13 @@
 @font-face {
-  font-family: "Ploni";
-  src: url("./fonts/PloniRegular.otf");
-  font-weight: 400;
+    font-family: "Ploni";
+    src: url("./fonts/PloniRegular.otf");
+    font-weight: 400;
 }
 
 @font-face {
-  font-family: "Ploni-bold";
-  src: url("./fonts/ploni-bold.otf");
-  font-weight: 700;
+    font-family: "Ploni-bold";
+    src: url("./fonts/ploni-bold.otf");
+    font-weight: 700;
 }
 
 :root {
@@ -459,6 +459,14 @@ footer {
     font-size: 11px;
     padding-top: 20px;
     margin-top: auto
+}
+
+.retry-img {
+    position: absolute;
+    width: 20%;
+    height: 25%;
+    margin-right:485px;
+    margin-top: 75px;
 }
 
 @media(max-width:850px) {
